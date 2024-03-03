@@ -1,0 +1,64 @@
+@use "../styles/partials/global";
+
+// GENERAL
+.main {
+	background-color: rgb(24, 87, 66);
+	padding: 4.5% 0 8%;
+	background-size: cover;
+	background-position: center;
+
+	&__header {
+		color: global.$primary-lt-bg;
+		font-size: 4rem;
+		margin: 3.5rem 6rem 2.5rem;
+	}
+}
+
+.itinerary {
+	display: flex;
+	justify-content: center;
+
+	&__card {
+		@extend %card;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__header {
+		width: 90%;
+		margin: 1rem 0 0.6rem;
+		border-bottom: 0.125rem solid;
+		text-align: center;
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	&__item {
+		width: 90%;
+		padding: 0.8rem;
+		margin-top: 1rem;
+		background-color: global.$secondary-lt-bg;
+		border-radius: 0.3rem;
+		text-align: center;
+		font-size: 1rem;
+	}
+}
+
+// HAWAII
+.hawaii-hero {
+	@extend .main;
+	background-image: url(../assets/Images/hawaii.jpg);
+}
+
+// ICELAND
+.iceland-hero {
+	@extend .main;
+	background-image: url(../assets/Images/iceland.jpg);
+}
+
+// GREECE
+.greece-hero {
+	@extend .main;
+	background-image: url(../assets/Images/greece.jpg);
+}
